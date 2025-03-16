@@ -22,6 +22,15 @@ namespace ViajanteApi.Web.Controllers.Api
         }
 
         //-----------------------------------------------------------------------------------
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Customer>>> Get()
+        {
+            List<Customer> customers = await _context.Customers
+              .OrderBy(x => x.Name)
+              .ToListAsync();
+            return Ok(customers);
+        }
+        //-----------------------------------------------------------------------------------
         [HttpPost]
         [Route("GetCustomers")]
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
@@ -31,7 +40,6 @@ namespace ViajanteApi.Web.Controllers.Api
               .ToListAsync();
             return Ok(customers);
         }
-        
         //-----------------------------------------------------------------------------------
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCustomer(int id, Customer customer)
