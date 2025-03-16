@@ -22,7 +22,8 @@ namespace ViajanteApi.Web.Controllers.Api
         }
 
         //-----------------------------------------------------------------------------------
-        [HttpGet]
+        [HttpPost]
+        [Route("GetCustomers")]
         public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {
             List<Customer> customers = await _context.Customers

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ViajanteApi.Web.Data.Entities
 {
@@ -12,10 +11,7 @@ namespace ViajanteApi.Web.Data.Entities
         [MaxLength(50, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public string Name { get; set; }
-
-        public ICollection<Bill>? Bills { get; set; }
-
-       
+      
     }
 }
 
