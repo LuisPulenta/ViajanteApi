@@ -82,6 +82,7 @@ namespace ViajanteApi.Web.Controllers.Api
         
         //-----------------------------------------------------------------------------------
         [HttpPost]
+        [Route("PostCustomer")]
         public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
         {
             if (!ModelState.IsValid)
