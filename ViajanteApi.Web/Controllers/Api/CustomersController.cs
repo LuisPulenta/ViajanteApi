@@ -6,8 +6,7 @@ using System;
 using ViajanteApi.Web.Data;
 using ViajanteApi.Web.Data.Entities;
 using System.Linq;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
+
 
 namespace ViajanteApi.Web.Controllers.Api
 {
