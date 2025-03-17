@@ -46,21 +46,26 @@ namespace ViajanteApi.Web.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("CustomerId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("Deliver")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("DeliverDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Number")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
-                    b.HasIndex("CustomerId");
+                    b.HasKey("Id");
 
                     b.ToTable("Bills");
                 });
@@ -83,18 +88,6 @@ namespace ViajanteApi.Web.Migrations
                         .IsUnique();
 
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("ViajanteApi.Web.Data.Entities.Bill", b =>
-                {
-                    b.HasOne("ViajanteApi.Web.Data.Entities.Customer", null)
-                        .WithMany("Bills")
-                        .HasForeignKey("CustomerId");
-                });
-
-            modelBuilder.Entity("ViajanteApi.Web.Data.Entities.Customer", b =>
-                {
-                    b.Navigation("Bills");
                 });
 #pragma warning restore 612, 618
         }

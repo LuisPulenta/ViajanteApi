@@ -14,6 +14,16 @@ namespace ViajanteApi.Web.Data.Entities
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public string Customer { get; set; }
 
+        [Display(Name = "Tipo")]
+        [MaxLength(10, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio")]
+        public string Type { get; set; }
+
+        [Display(Name = "N°")]
+        [MaxLength(50, ErrorMessage = "El campo {0} no puede tener más de {1} caracteres")]
+        [Required(ErrorMessage = "El campo {0} es obligatorio")]
+        public string Number { get; set; }
+
         [Display(Name = "Fecha Creación")]
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
         public DateTime CreateDate { get; set; }
