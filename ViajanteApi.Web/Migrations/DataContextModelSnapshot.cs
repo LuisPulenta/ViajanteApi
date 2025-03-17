@@ -35,7 +35,8 @@ namespace ViajanteApi.Web.Migrations
                     b.Property<bool>("Charge")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("ChargeDate")
+                    b.Property<DateTime?>("ChargeDate")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreateDate")
@@ -49,7 +50,8 @@ namespace ViajanteApi.Web.Migrations
                     b.Property<bool>("Deliver")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("DeliverDate")
+                    b.Property<DateTime?>("DeliverDate")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Number")

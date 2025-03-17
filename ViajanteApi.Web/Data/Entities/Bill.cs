@@ -43,7 +43,7 @@ namespace ViajanteApi.Web.Data.Entities
 
         [Display(Name = "Fecha Entrega")]
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
-        public DateTime ChargeDate { get; set; }
+        public DateTime? ChargeDate { get; set; }
 
         [Display(Name = "Entregado")]
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
@@ -51,7 +51,7 @@ namespace ViajanteApi.Web.Data.Entities
 
         [Display(Name = "Fecha Cobro")]
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
-        public DateTime DeliverDate { get; set; }
+        public DateTime? DeliverDate { get; set; }
 
         [Display(Name = "Cobrado")]
         [Required(ErrorMessage = "El campo {0} es obligatorio")]
