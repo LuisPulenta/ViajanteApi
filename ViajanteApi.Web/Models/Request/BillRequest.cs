@@ -13,9 +13,9 @@ namespace TicketsApi.Web.Models.Request
         public DateTime CreateDate { get; set; }
         public DateTime BillDate { get; set; }
         public decimal Amount { get; set; }
-        public DateTime ChargeDate { get; set; }
+        public DateTime? ChargeDate { get; set; }
         public bool Charge { get; set; }
-        public DateTime DeliverDate { get; set; }
+        public DateTime? DeliverDate { get; set; }
         public bool Deliver { get; set; }
         public byte[] ImageArray { get; set; }
     }

@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Account\" />
+    <Folder Include="wwwroot\images\bills\" />
   </ItemGroup>
 
 </Project>
