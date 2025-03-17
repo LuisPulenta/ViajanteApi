@@ -16,7 +16,6 @@ namespace TicketsApi.Web.Controllers.Api
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class BillsController : ControllerBase
     {
         private readonly DataContext _context;
