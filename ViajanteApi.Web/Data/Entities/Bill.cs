@@ -56,8 +56,8 @@ namespace ViajanteApi.Web.Data.Entities
         public bool Deliver { get; set; }
 
         public string PhotoFullPath => string.IsNullOrEmpty(Photo)
-        ? $"https://keypress.serveftp.net/Bills/images/logos/noimage.png"
-        : $"https://keypress.serveftp.net/Bills{Photo.Substring(1)}";
+        ? $"https://keypress.serveftp.net/ViajanteApi/images/logos/noimage.png"
+        : $"https://keypress.serveftp.net/ViajanteApi{Photo.Substring(1)}";
 
     }
 }
